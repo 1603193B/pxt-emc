@@ -3,6 +3,7 @@
 
 //% color=190 weight=100 icon="\uf1ec" block="EMC"
 namespace EMC {
+    //% block
     export namespace mBot {
         export const enum directions {
             Invalid = -2,
@@ -17,7 +18,7 @@ namespace EMC {
             NorthWest = 7
         }
 
-        //%block
+        //% block
         export const radioKeyword: string = "DIR"
 
         // Assumes left motor to be Motor1
@@ -52,7 +53,7 @@ namespace EMC {
             basic.pause(1000)
             kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor2)
             basic.pause(1000)
-            
+
             led.toggleAll()
         }
     }
