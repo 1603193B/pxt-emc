@@ -29,7 +29,7 @@ namespace EMC {
             kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, speed)
         }
 
-        export function goBackwards(speed: number) {
+        export function goBackward(speed: number) {
             kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, speed)
             kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, speed)
         }
@@ -50,6 +50,10 @@ namespace EMC {
 
         export function rightMotor(motorDir: kitronik_motor_driver.MotorDirection, speed: number) {
             kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, motorDir, speed)
+        }
+        export function stopMotors() {
+            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor1)
+            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor2)
         }
 
         export function testMotor() {
