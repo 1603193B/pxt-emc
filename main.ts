@@ -22,13 +22,32 @@ namespace EMC {
         export const radioKeyword: string = "DIR"
 
         // Assumes left motor to be Motor1
-        //% speed.min=0
+        // Assume right motor ti be Motor2
+
+        export function goForward(speed: number) {
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, speed)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, speed)
+        }
+
+        export function goBackwards(speed: number) {
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, speed)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, speed)
+        }
+
+        export function turnClockwise(speed: number) {
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, speed)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, speed)
+        }
+
+        export function turnAnticlockwise(speed: number) {
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, speed)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, speed)
+        }
+
         export function leftMotor(motorDir: kitronik_motor_driver.MotorDirection, speed: number) {
             kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, motorDir, speed)
         }
 
-        // Assume right motor ti be Motor2
-        //% speed.min=0
         export function rightMotor(motorDir: kitronik_motor_driver.MotorDirection, speed: number) {
             kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, motorDir, speed)
         }
