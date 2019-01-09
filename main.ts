@@ -52,6 +52,7 @@ namespace EMC {
             basic.pause(1000)
             kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor2)
             basic.pause(1000)
+            
             led.toggleAll()
         }
     }
