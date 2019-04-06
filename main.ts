@@ -83,38 +83,44 @@ namespace EMC {
         }
     }
 
-    //*
-    export namespace Numbers {
+    export namespace Test {
 
-        export const Num10: string = `
+        //% block
+        export const test = "Testing"
+
+        //*
+        export namespace Numbers {
+
+            export const Num10: string = `
                                     # . # # #
                                     # . # . #
                                     # . # . #
                                     # . # . #
                                     # . # # #
                                     `;
+        }
+        /**/
+
+        //% block
+        export const Number: Image[] = [
+            images.createImage(`
+            . # # # .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # # .
+            `),
+            images.createImage(`
+            . . # . .
+            . . # . .
+            . . # . .
+            . . # . .
+            . . # . .
+            `),
+
+        ]
+
     }
-    /**/
 
-    //% block
-    export const IconNames: Image[] = [
-        images.createImage(`
-            . # # # .
-            . # . # .
-            . # . # .
-            . # . # .
-            . # # # .
-            `),
-        images.createImage(`
-            . . # . .
-            . . # . .
-            . . # . .
-            . . # . .
-            . . # . .
-            `),
-
-    ]
-
-    //% block
-    export const test = "HelloWorld"
+    
 }
