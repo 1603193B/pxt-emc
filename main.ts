@@ -86,7 +86,7 @@ namespace EMC {
     //*
     export namespace Numbers {
 
-        export const Num10 : string = `
+        export const Num10: string = `
                                     # . # # #
                                     # . # . #
                                     # . # . #
@@ -97,7 +97,7 @@ namespace EMC {
     /**/
 
     //% block
-    export const Number: Image[] = [
+    export const Number_: Image[] = [
         images.createImage(`
             . # # # .
             . # . # .
@@ -114,4 +114,7 @@ namespace EMC {
             `),
 
     ]
+
+    //% block
+    export const test = "HelloWorld"
 }
