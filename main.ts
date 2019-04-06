@@ -85,13 +85,15 @@ namespace EMC {
 
     //*
     export namespace Numbers {
-        export const Num10 = `
-                                    # . # # #
-                                    # . # . #
-                                    # . # . #
-                                    # . # . #
-                                    # . # # #
-                                    `;
+
+        //% block
+        export const Num10 : Image = images.createImage(`
+                                                        # . # # #
+                                                        # . # . #
+                                                        # . # . #
+                                                        # . # . #
+                                                        # . # # #
+                                                        `)
         /**/
     }
 }
