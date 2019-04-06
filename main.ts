@@ -27,72 +27,90 @@ namespace EMC {
         // Assumes right motor to be Motor2
 
         export function goForward(speed: number) {
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, speed)
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, speed)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, speed);
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, speed);
         }
 
         export function goBackward(speed: number) {
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, speed)
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, speed)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, speed);
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, speed);
         }
 
         export function turnClockwise(speed: number) {
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, speed)
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, speed)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, speed);
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, speed);
         }
 
         export function turnAnticlockwise(speed: number) {
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, speed)
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, speed)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, speed);
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, speed);
         }
 
         export function leftMotor(motorDir: kitronik_motor_driver.MotorDirection, speed: number) {
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, motorDir, speed)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, motorDir, speed);
         }
 
         export function rightMotor(motorDir: kitronik_motor_driver.MotorDirection, speed: number) {
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, motorDir, speed)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, motorDir, speed);
         }
         export function stopMotors() {
-            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor1)
-            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor2)
+            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor1);
+            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor2);
         }
 
         export function testMotor() {
-            led.toggleAll()
+            led.toggleAll();
 
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, 100)
-            basic.pause(1000)
-            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor1)
-            basic.pause(1000)
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, 100)
-            basic.pause(1000)
-            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor1)
-            basic.pause(1000)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, 100);
+            basic.pause(1000);
+            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor1);
+            basic.pause(1000);
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Reverse, 100);
+            basic.pause(1000);
+            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor1);
+            basic.pause(1000);
 
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, 100)
-            basic.pause(1000)
-            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor2)
-            basic.pause(1000)
-            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, 100)
-            basic.pause(1000)
-            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor2)
-            basic.pause(1000)
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Forward, 100);
+            basic.pause(1000);
+            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor2);
+            basic.pause(1000);
+            kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor2, kitronik_motor_driver.MotorDirection.Reverse, 100);
+            basic.pause(1000);
+            kitronik_motor_driver.motorOff(kitronik_motor_driver.Motors.Motor2);
+            basic.pause(1000);
 
-            led.toggleAll()
+            led.toggleAll();
         }
     }
 
     //*
     export namespace Numbers {
 
-        export const Num10 = `
-                                                        # . # # #
-                                                        # . # . #
-                                                        # . # . #
-                                                        # . # . #
-                                                        # . # # #
-                                                        `;
-        /**/
+        export const Num10 : string = `
+                                    # . # # #
+                                    # . # . #
+                                    # . # . #
+                                    # . # . #
+                                    # . # # #
+                                    `;
+/**/
     }
+
+    export const Number = [
+        images.createImage(`
+            . # # # .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # # .
+            `),
+        images.createImage(`
+            . . # . .
+            . . # . .
+            . . # . .
+            . . # . .
+            . . # . .
+            `),
+
+    ]
 }
