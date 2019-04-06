@@ -93,10 +93,11 @@ namespace EMC {
                                     # . # . #
                                     # . # # #
                                     `;
-/**/
     }
+    /**/
 
-    export const Number = [
+    //% block
+    export const Number: Image[] = [
         images.createImage(`
             . # # # .
             . # . # .
