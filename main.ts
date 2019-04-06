@@ -21,10 +21,10 @@ namespace EMC {
         }
 
         //% block
-        export const radioKeyword: string = "DIR"
+        export const radioKeyword: string = "DIR";
 
         // Assumes left motor to be Motor1
-        // Assume right motor ti be Motor2
+        // Assumes right motor to be Motor2
 
         export function goForward(speed: number) {
             kitronik_motor_driver.motorOn(kitronik_motor_driver.Motors.Motor1, kitronik_motor_driver.MotorDirection.Forward, speed)
@@ -81,5 +81,17 @@ namespace EMC {
 
             led.toggleAll()
         }
+    }
+
+    //*
+    export namespace Numbers {
+        export const Num10: string = `
+                                    # . # # #
+                                    # . # . #
+                                    # . # . #
+                                    # . # . #
+                                    # . # # #
+                                    `;
+        /**/
     }
 }
