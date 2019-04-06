@@ -97,7 +97,7 @@ namespace EMC {
     /**/
 
     //% block
-    export const Number_: Image[] = [
+    export const IconNames: Image[] = [
         images.createImage(`
             . # # # .
             . # . # .
