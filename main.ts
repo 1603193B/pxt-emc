@@ -85,7 +85,7 @@ namespace EMC {
 
     //*
     export namespace Numbers {
-        export const Num10: string = `
+        export const Num10 = `
                                     # . # # #
                                     # . # . #
                                     # . # . #
