@@ -86,14 +86,13 @@ namespace EMC {
     //*
     export namespace Numbers {
 
-        //% block
-        export const Num10 : Image = images.createImage(`
+        export const Num10 = `
                                                         # . # # #
                                                         # . # . #
                                                         # . # . #
                                                         # . # . #
                                                         # . # # #
-                                                        `)
+                                                        `;
         /**/
     }
 }
