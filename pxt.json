@@ -5,7 +5,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "pxt-kitronik-motor-driver": "github:kitronikltd/pxt-kitronik-motor-driver#v0.0.6"
+        "pxt-kitronik-motor-driver": "github:kitronikltd/pxt-kitronik-motor-driver#v0.0.6",
+        "pxt-emc": "workspace:f2a73837-a978-4a57-a871-e650fd2a445e"
     },
     "files": [
         "README.md",
